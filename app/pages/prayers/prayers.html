@@ -1,0 +1,31 @@
+
+<ActionBar title="Prayers">
+  <ActionItem text="Share" (tap)="share()" android.systemIcon="ic_menu_share_holo_dark" ios.systemIcon="9" ios.position="right"></ActionItem>
+</ActionBar>
+
+<RadSideDrawer tkExampleTitle tkToggleNavButton drawerContentSize="200">
+    <StackLayout tkDrawerContent class="sideStackLayout">
+                <StackLayout class="sideTitleStackLayout">
+            <Label text="Prayer Group"></Label>
+        </StackLayout>
+        <StackLayout class="sideStackLayout">
+            <Label text="Sections" class="sideLabel sideLightGrayLabel"></Label>
+            <Label text="Sign In" class="sideLabel" (tap) = "goLogin()"></Label>
+            <Label text="Intentions" class="sideLabel" (tap) = "goSubmitIntention()" ></Label>
+            <Label text="Set Reminders" class="sideLabel" (tap) = "goReminders()"></Label>
+            <Label text="Prayers" class="sideLabel"(tap) = "goPrayers()"></Label>
+            <Label text="About Us" class="sideLabel sideLightGrayLabel"></Label>
+            <Label text="The Marians" class="sideLabel"></Label>
+            <Label text="The Association" class="sideLabel"></Label>
+            <Label text="Contact Us" class="sideLabel"></Label>
+            <Label text="Close Menu" color="darkgray" padding="10" (tap)="onCloseDrawerTap()"></Label>
+        </StackLayout>
+    </StackLayout>
+    <!-- original content -->
+	<StackLayout tkMainContent class="main">
+		<Label text="A list of prayers or prayer categories goes here."></Label>
+	</StackLayout>
+	<!-- end original content -->
+</RadSideDrawer>
+
+
